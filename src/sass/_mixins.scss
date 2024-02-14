@@ -1,0 +1,27 @@
+@import '_variables';
+
+@mixin rainbow-line-gradient {
+    $colors: $rainbow-red, $rainbow-purple, $rainbow-blue, $rainbow-cyan, $rainbow-green, $rainbow-yellow, $rainbow-orange, $rainbow-red;
+    background: linear-gradient(to right, $colors);
+    background: -webkit-linear-gradient(to right, $colors);
+    display: block;
+}
+
+@mixin top-border-radius($border-radius-value) {
+    border-top-left-radius: $border-radius-value;
+    border-top-right-radius: $border-radius-value;
+}
+
+@mixin background-image-svg($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin indicator-triangle($size, $color) {
+    width: 0;
+	height: 0;
+	border-left: $size solid transparent;
+	border-right: $size solid transparent;
+	border-bottom: $size solid $color;
+}

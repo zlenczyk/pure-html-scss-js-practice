@@ -1,0 +1,86 @@
+@import '_mixins';
+@import '_typography';
+
+.terminal-container {
+    max-width: 726px;
+    height: 374px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--terminal-background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+
+    .terminal-top-bar {
+        height: 20px;
+        background-color: var(--terminal-secondary-background-color);
+        position: relative;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .terminal-navigation-icons {
+        position: absolute;
+        padding-left: 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .terminal-navigation-icon {
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+
+            &.close-icon {
+                background-color: var(--terminal-close-icon);
+            }
+            
+            &.minimize-icon {
+                background-color: var(--terminal-minimize-icon);
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            
+            &.resize-icon {
+                background-color: var(--terminal-resize-icon);
+            }
+        }
+    }
+
+    .terminal-title {
+        @include primary-font-11-bold;
+        color: var(--terminal-title-text);
+    }
+    
+    .terminal-content {
+        padding: 20px;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+
+        .terminal-command-list {
+            flex-grow: 1;
+
+            .terminal-command-item {
+                @include terminal-command-font;
+                color: var(--main-white-text-color);
+            }
+        }
+
+        .terminal-input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            height: 100%;
+            width: 100%;
+            color: var(--terminal-text-color);
+            height: 40px;
+            border-radius: var(--main-border-radius);
+            margin-top: 20px;
+            background-color: var(--terminal-secondary-background-color);
+            padding: 0 14px;
+        }
+    }
+}

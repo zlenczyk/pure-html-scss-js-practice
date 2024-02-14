@@ -1,0 +1,60 @@
+$primary-font: 'Inter';
+$primary-font-italic: "Inter Tight", sans-serif;
+$menu-link-font: 'Poppins';
+$terminal-command-font: "Roboto Mono", monospace;
+
+$weight-400: 400;
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+
+$size-11: 11px;
+$size-12: 12px;
+$size-13: 13px;
+$size-14: 14px;
+$size-15: 15px;
+$size-16: 16px;
+
+@mixin primary-font-11-bold {
+    font-family: $primary-font;
+    font-size: $size-11;
+    font-weight: $weight-700;
+}
+
+@mixin primary-font-13-regular {
+    font-family: $primary-font;
+    font-size: $size-13;
+    font-weight: $weight-400;
+}
+
+@mixin primary-font-15-medium {
+    font-family: $primary-font;
+    font-size: $size-15;
+    font-weight: $weight-500;
+}
+
+@mixin primary-font-italic-13-regular {
+    font-family: $primary-font-italic;
+    font-size: $size-13;
+    font-weight: $weight-400;
+}
+
+@mixin menu-link-font-14-medium {
+    font-family: $menu-link-font;
+    font-size: $size-14;
+    font-weight: $weight-600;
+}
+
+@mixin menu-link-font-16-semibold {
+    font-family: $menu-link-font;
+    font-size: $size-16;
+    font-weight: $weight-500;
+}
+
+@mixin terminal-command-font {
+    font-family: $terminal-command-font;
+    font-optical-sizing: auto;
+    font-weight: $weight-500;
+    font-size: $size-12;
+    font-style: normal;
+}
